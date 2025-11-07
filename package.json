@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Highlight.js grammar for MCFunction",
     "main": "src/mcfunction.js",
+    "types": "src/mcfunction.d.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/TheFireBlast/highlightjs-mcfunction.git"

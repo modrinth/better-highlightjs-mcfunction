@@ -19,7 +19,7 @@ This is a fork of the original [highlightjs-mcfunction](https://github.com/TheFi
 Since this fork is not published to npm, you need to install it directly from GitHub:
 
 ```bash
-pnpm install github:modrinth/highlightjs-mcfunction
+pnpm install github:modrinth/better-highlightjs-mcfunction
 ```
 
 Or add it to your `package.json`:
@@ -27,7 +27,7 @@ Or add it to your `package.json`:
 ```json
 {
   "dependencies": {
-    "highlightjs-mcfunction": "github:modrinth/highlightjs-mcfunction"
+    "highlightjs-mcfunction": "github:modrinth/better-highlightjs-mcfunction"
   }
 }
 ```

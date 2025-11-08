@@ -1,5 +1,37 @@
 # MCFunction - a language grammar for highlight.js
 
+This is a fork of the original [highlightjs-mcfunction](https://github.com/TheFireBlast/highlightjs-mcfunction) by FireBlast. The syntax definition has been significantly enhanced by converting the comprehensive [tmLanguage definition](https://github.com/MinecraftCommands/syntax-mcfunction/blob/main/mcfunction.tmLanguage) from the MinecraftCommands/syntax-mcfunction repository into Highlight.js format.
+
+## Features
+
+- Full support for MCFunction syntax including modern (up to 1.21) features
+- Macro support with `$(varname)` syntax
+- Proper string escape sequence handling
+- Enhanced comment types: regular (`#`), heading (`#>`), shebang (`#!`), and block (`##`)
+- Accurate UUID, namespace, and selector highlighting
+- Resource name validation with namespace:path format
+- Coordinate operators (`~`, `^`) and number type suffixes
+
+## Installation
+
+### With pnpm (or npm/yarn)
+
+Since this fork is not published to npm, you need to install it directly from GitHub:
+
+```bash
+pnpm install github:modrinth/highlightjs-mcfunction
+```
+
+Or add it to your `package.json`:
+
+```json
+{
+  "dependencies": {
+    "highlightjs-mcfunction": "github:modrinth/highlightjs-mcfunction"
+  }
+}
+```
+
 ## Usage
 
 Simply include the Highlight.js library in your webpage or Node app, then load this module.
@@ -10,8 +42,11 @@ Simply load the module after loading Highlight.js. You'll use the minified versi
 
 ```html
 <script type="text/javascript" src="/path/to/highlight.min.js"></script>
-<script type="text/javascript" charset="UTF-8"
-  src="/path/to/highlightjs-mcfunction/dist/mcfunction.min.js"></script>
+<script
+  type="text/javascript"
+  charset="UTF-8"
+  src="/path/to/highlightjs-mcfunction/dist/mcfunction.min.js"
+></script>
 <script type="text/javascript">
   hljs.initHighlightingOnLoad();
 </script>
@@ -22,13 +57,12 @@ Simply load the module after loading Highlight.js. You'll use the minified versi
 If you're using Node / Webpack / Rollup / Browserify, etc, simply require the language module, then register it with Highlight.js.
 
 ```javascript
-var hljs = require('highlightjs');
-var hljsMCFunction = require('highlightjs-mcfunction');
+var hljs = require("highlightjs");
+var hljsMCFunction = require("highlightjs-mcfunction");
 
 hljs.registerLanguage("mcfunction", hljsMCFunction);
 hljs.initHighlightingOnLoad();
 ```
-
 
 ## License
 
